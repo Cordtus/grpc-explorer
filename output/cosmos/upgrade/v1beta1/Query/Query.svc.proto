@@ -1,7 +1,0 @@
-service Query {
-  rpc CurrentPlan (.cosmos.upgrade.v1beta1.QueryCurrentPlanRequest) returns (.cosmos.upgrade.v1beta1.QueryCurrentPlanResponse);
-  rpc AppliedPlan (.cosmos.upgrade.v1beta1.QueryAppliedPlanRequest) returns (.cosmos.upgrade.v1beta1.QueryAppliedPlanResponse);
-  rpc UpgradedConsensusState (.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateRequest) returns (.cosmos.upgrade.v1beta1.QueryUpgradedConsensusStateResponse);
-  rpc ModuleVersions (.cosmos.upgrade.v1beta1.QueryModuleVersionsRequest) returns (.cosmos.upgrade.v1beta1.QueryModuleVersionsResponse);
-  rpc Authority (.cosmos.upgrade.v1beta1.QueryAuthorityRequest) returns (.cosmos.upgrade.v1beta1.QueryAuthorityResponse);
-}

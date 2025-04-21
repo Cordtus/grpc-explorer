@@ -1,3 +1,0 @@
-service ReflectionService {
-  rpc FileDescriptors (.cosmos.reflection.v1.FileDescriptorsRequest) returns (.cosmos.reflection.v1.FileDescriptorsResponse);
-}

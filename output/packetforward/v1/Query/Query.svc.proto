@@ -1,3 +1,0 @@
-service Query {
-  rpc Params (.packetforward.v1.QueryParamsRequest) returns (.packetforward.v1.QueryParamsResponse);
-}

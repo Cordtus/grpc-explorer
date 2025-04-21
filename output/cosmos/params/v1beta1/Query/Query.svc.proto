@@ -1,4 +1,0 @@
-service Query {
-  rpc Params (.cosmos.params.v1beta1.QueryParamsRequest) returns (.cosmos.params.v1beta1.QueryParamsResponse);
-  rpc Subspaces (.cosmos.params.v1beta1.QuerySubspacesRequest) returns (.cosmos.params.v1beta1.QuerySubspacesResponse);
-}

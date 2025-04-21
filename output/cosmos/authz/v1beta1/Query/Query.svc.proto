@@ -1,5 +1,0 @@
-service Query {
-  rpc Grants (.cosmos.authz.v1beta1.QueryGrantsRequest) returns (.cosmos.authz.v1beta1.QueryGrantsResponse);
-  rpc GranterGrants (.cosmos.authz.v1beta1.QueryGranterGrantsRequest) returns (.cosmos.authz.v1beta1.QueryGranterGrantsResponse);
-  rpc GranteeGrants (.cosmos.authz.v1beta1.QueryGranteeGrantsRequest) returns (.cosmos.authz.v1beta1.QueryGranteeGrantsResponse);
-}

@@ -1,7 +1,0 @@
-message QueryParamsRequest {
-}
-
-message QueryParamsResponse {
-  .pob.builder.v1.Params params = 1;
-}
-

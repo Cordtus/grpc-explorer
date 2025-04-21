@@ -1,3 +1,0 @@
-service Query {
-  rpc AppOptions (.cosmos.autocli.v1.AppOptionsRequest) returns (.cosmos.autocli.v1.AppOptionsResponse);
-}

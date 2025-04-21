@@ -1,7 +1,0 @@
-service Query {
-  rpc FeeShares (.juno.feeshare.v1.QueryFeeSharesRequest) returns (.juno.feeshare.v1.QueryFeeSharesResponse);
-  rpc FeeShare (.juno.feeshare.v1.QueryFeeShareRequest) returns (.juno.feeshare.v1.QueryFeeShareResponse);
-  rpc Params (.juno.feeshare.v1.QueryParamsRequest) returns (.juno.feeshare.v1.QueryParamsResponse);
-  rpc DeployerFeeShares (.juno.feeshare.v1.QueryDeployerFeeSharesRequest) returns (.juno.feeshare.v1.QueryDeployerFeeSharesResponse);
-  rpc WithdrawerFeeShares (.juno.feeshare.v1.QueryWithdrawerFeeSharesRequest) returns (.juno.feeshare.v1.QueryWithdrawerFeeSharesResponse);
-}

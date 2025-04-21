@@ -1,4 +1,0 @@
-service Query {
-  rpc Checksums (.ibc.lightclients.wasm.v1.QueryChecksumsRequest) returns (.ibc.lightclients.wasm.v1.QueryChecksumsResponse);
-  rpc Code (.ibc.lightclients.wasm.v1.QueryCodeRequest) returns (.ibc.lightclients.wasm.v1.QueryCodeResponse);
-}
