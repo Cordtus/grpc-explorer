@@ -1,8 +1,0 @@
-service Query {
-  rpc DenomTraces (.ibc.applications.transfer.v1.QueryDenomTracesRequest) returns (.ibc.applications.transfer.v1.QueryDenomTracesResponse);
-  rpc DenomTrace (.ibc.applications.transfer.v1.QueryDenomTraceRequest) returns (.ibc.applications.transfer.v1.QueryDenomTraceResponse);
-  rpc Params (.ibc.applications.transfer.v1.QueryParamsRequest) returns (.ibc.applications.transfer.v1.QueryParamsResponse);
-  rpc DenomHash (.ibc.applications.transfer.v1.QueryDenomHashRequest) returns (.ibc.applications.transfer.v1.QueryDenomHashResponse);
-  rpc EscrowAddress (.ibc.applications.transfer.v1.QueryEscrowAddressRequest) returns (.ibc.applications.transfer.v1.QueryEscrowAddressResponse);
-  rpc TotalEscrowForDenom (.ibc.applications.transfer.v1.QueryTotalEscrowForDenomRequest) returns (.ibc.applications.transfer.v1.QueryTotalEscrowForDenomResponse);
-}

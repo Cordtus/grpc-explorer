@@ -1,7 +1,0 @@
-service Query {
-  rpc FeePayContract (.juno.feepay.v1.QueryFeePayContract) returns (.juno.feepay.v1.QueryFeePayContractResponse);
-  rpc FeePayContracts (.juno.feepay.v1.QueryFeePayContracts) returns (.juno.feepay.v1.QueryFeePayContractsResponse);
-  rpc FeePayContractUses (.juno.feepay.v1.QueryFeePayContractUses) returns (.juno.feepay.v1.QueryFeePayContractUsesResponse);
-  rpc FeePayWalletIsEligible (.juno.feepay.v1.QueryFeePayWalletIsEligible) returns (.juno.feepay.v1.QueryFeePayWalletIsEligibleResponse);
-  rpc Params (.juno.feepay.v1.QueryParamsRequest) returns (.juno.feepay.v1.QueryParamsResponse);
-}

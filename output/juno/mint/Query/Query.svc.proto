@@ -1,6 +1,0 @@
-service Query {
-  rpc Params (.juno.mint.QueryParamsRequest) returns (.juno.mint.QueryParamsResponse);
-  rpc Inflation (.juno.mint.QueryInflationRequest) returns (.juno.mint.QueryInflationResponse);
-  rpc AnnualProvisions (.juno.mint.QueryAnnualProvisionsRequest) returns (.juno.mint.QueryAnnualProvisionsResponse);
-  rpc TargetSupply (.juno.mint.QueryTargetSupplyRequest) returns (.juno.mint.QueryTargetSupplyResponse);
-}
