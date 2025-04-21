@@ -1,0 +1,21 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .juno.cwhooks.v1.Params params = 1;
+}
+
+message QueryStakingContractsRequest {
+}
+
+message QueryStakingContractsResponse {
+  repeated string contracts = 1;
+}
+
+message QueryGovernanceContractsRequest {
+}
+
+message QueryGovernanceContractsResponse {
+  repeated string contracts = 1;
+}
+

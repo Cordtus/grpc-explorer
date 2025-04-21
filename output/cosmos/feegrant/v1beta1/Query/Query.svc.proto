@@ -1,0 +1,5 @@
+service Query {
+  rpc Allowance (.cosmos.feegrant.v1beta1.QueryAllowanceRequest) returns (.cosmos.feegrant.v1beta1.QueryAllowanceResponse);
+  rpc Allowances (.cosmos.feegrant.v1beta1.QueryAllowancesRequest) returns (.cosmos.feegrant.v1beta1.QueryAllowancesResponse);
+  rpc AllowancesByGranter (.cosmos.feegrant.v1beta1.QueryAllowancesByGranterRequest) returns (.cosmos.feegrant.v1beta1.QueryAllowancesByGranterResponse);
+}

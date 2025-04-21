@@ -1,0 +1,15 @@
+message QueryChecksumsRequest {
+}
+
+message QueryChecksumsResponse {
+  repeated string checksums = 1;
+}
+
+message QueryCodeRequest {
+  string checksum = 1;
+}
+
+message QueryCodeResponse {
+  bytes data = 1;
+}
+

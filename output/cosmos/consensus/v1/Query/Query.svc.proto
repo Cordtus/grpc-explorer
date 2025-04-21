@@ -1,0 +1,3 @@
+service Query {
+  rpc Params (.cosmos.consensus.v1.QueryParamsRequest) returns (.cosmos.consensus.v1.QueryParamsResponse);
+}

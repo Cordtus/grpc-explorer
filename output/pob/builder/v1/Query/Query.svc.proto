@@ -1,0 +1,3 @@
+service Query {
+  rpc Params (.pob.builder.v1.QueryParamsRequest) returns (.pob.builder.v1.QueryParamsResponse);
+}

@@ -1,0 +1,5 @@
+service Query {
+  rpc Params (.juno.cwhooks.v1.QueryParamsRequest) returns (.juno.cwhooks.v1.QueryParamsResponse);
+  rpc StakingContracts (.juno.cwhooks.v1.QueryStakingContractsRequest) returns (.juno.cwhooks.v1.QueryStakingContractsResponse);
+  rpc GovernanceContracts (.juno.cwhooks.v1.QueryGovernanceContractsRequest) returns (.juno.cwhooks.v1.QueryGovernanceContractsResponse);
+}

@@ -1,0 +1,5 @@
+service Query {
+  rpc Params (.cosmos.slashing.v1beta1.QueryParamsRequest) returns (.cosmos.slashing.v1beta1.QueryParamsResponse);
+  rpc SigningInfo (.cosmos.slashing.v1beta1.QuerySigningInfoRequest) returns (.cosmos.slashing.v1beta1.QuerySigningInfoResponse);
+  rpc SigningInfos (.cosmos.slashing.v1beta1.QuerySigningInfosRequest) returns (.cosmos.slashing.v1beta1.QuerySigningInfosResponse);
+}

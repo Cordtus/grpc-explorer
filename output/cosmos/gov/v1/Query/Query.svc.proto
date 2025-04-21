@@ -1,0 +1,10 @@
+service Query {
+  rpc Proposal (.cosmos.gov.v1.QueryProposalRequest) returns (.cosmos.gov.v1.QueryProposalResponse);
+  rpc Proposals (.cosmos.gov.v1.QueryProposalsRequest) returns (.cosmos.gov.v1.QueryProposalsResponse);
+  rpc Vote (.cosmos.gov.v1.QueryVoteRequest) returns (.cosmos.gov.v1.QueryVoteResponse);
+  rpc Votes (.cosmos.gov.v1.QueryVotesRequest) returns (.cosmos.gov.v1.QueryVotesResponse);
+  rpc Params (.cosmos.gov.v1.QueryParamsRequest) returns (.cosmos.gov.v1.QueryParamsResponse);
+  rpc Deposit (.cosmos.gov.v1.QueryDepositRequest) returns (.cosmos.gov.v1.QueryDepositResponse);
+  rpc Deposits (.cosmos.gov.v1.QueryDepositsRequest) returns (.cosmos.gov.v1.QueryDepositsResponse);
+  rpc TallyResult (.cosmos.gov.v1.QueryTallyResultRequest) returns (.cosmos.gov.v1.QueryTallyResultResponse);
+}

@@ -1,0 +1,8 @@
+service Query {
+  rpc Connection (.ibc.core.connection.v1.QueryConnectionRequest) returns (.ibc.core.connection.v1.QueryConnectionResponse);
+  rpc Connections (.ibc.core.connection.v1.QueryConnectionsRequest) returns (.ibc.core.connection.v1.QueryConnectionsResponse);
+  rpc ClientConnections (.ibc.core.connection.v1.QueryClientConnectionsRequest) returns (.ibc.core.connection.v1.QueryClientConnectionsResponse);
+  rpc ConnectionClientState (.ibc.core.connection.v1.QueryConnectionClientStateRequest) returns (.ibc.core.connection.v1.QueryConnectionClientStateResponse);
+  rpc ConnectionConsensusState (.ibc.core.connection.v1.QueryConnectionConsensusStateRequest) returns (.ibc.core.connection.v1.QueryConnectionConsensusStateResponse);
+  rpc ConnectionParams (.ibc.core.connection.v1.QueryConnectionParamsRequest) returns (.ibc.core.connection.v1.QueryConnectionParamsResponse);
+}

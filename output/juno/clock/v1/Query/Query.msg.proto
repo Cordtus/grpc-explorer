@@ -1,0 +1,24 @@
+message QueryClockContracts {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryClockContractsResponse {
+  repeated .juno.clock.v1.ClockContract clock_contracts = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryClockContract {
+  string contract_address = 1;
+}
+
+message QueryClockContractResponse {
+  .juno.clock.v1.ClockContract clock_contract = 1;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .juno.clock.v1.Params params = 1;
+}
+

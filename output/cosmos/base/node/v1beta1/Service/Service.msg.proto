@@ -1,0 +1,7 @@
+message ConfigRequest {
+}
+
+message ConfigResponse {
+  string minimum_gas_price = 1;
+}
+

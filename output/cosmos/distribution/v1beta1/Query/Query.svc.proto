@@ -1,0 +1,12 @@
+service Query {
+  rpc Params (.cosmos.distribution.v1beta1.QueryParamsRequest) returns (.cosmos.distribution.v1beta1.QueryParamsResponse);
+  rpc ValidatorDistributionInfo (.cosmos.distribution.v1beta1.QueryValidatorDistributionInfoRequest) returns (.cosmos.distribution.v1beta1.QueryValidatorDistributionInfoResponse);
+  rpc ValidatorOutstandingRewards (.cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsRequest) returns (.cosmos.distribution.v1beta1.QueryValidatorOutstandingRewardsResponse);
+  rpc ValidatorCommission (.cosmos.distribution.v1beta1.QueryValidatorCommissionRequest) returns (.cosmos.distribution.v1beta1.QueryValidatorCommissionResponse);
+  rpc ValidatorSlashes (.cosmos.distribution.v1beta1.QueryValidatorSlashesRequest) returns (.cosmos.distribution.v1beta1.QueryValidatorSlashesResponse);
+  rpc DelegationRewards (.cosmos.distribution.v1beta1.QueryDelegationRewardsRequest) returns (.cosmos.distribution.v1beta1.QueryDelegationRewardsResponse);
+  rpc DelegationTotalRewards (.cosmos.distribution.v1beta1.QueryDelegationTotalRewardsRequest) returns (.cosmos.distribution.v1beta1.QueryDelegationTotalRewardsResponse);
+  rpc DelegatorValidators (.cosmos.distribution.v1beta1.QueryDelegatorValidatorsRequest) returns (.cosmos.distribution.v1beta1.QueryDelegatorValidatorsResponse);
+  rpc DelegatorWithdrawAddress (.cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressRequest) returns (.cosmos.distribution.v1beta1.QueryDelegatorWithdrawAddressResponse);
+  rpc CommunityPool (.cosmos.distribution.v1beta1.QueryCommunityPoolRequest) returns (.cosmos.distribution.v1beta1.QueryCommunityPoolResponse);
+}

@@ -1,0 +1,4 @@
+service Query {
+  rpc InterchainAccount (.ibc.applications.interchain_accounts.controller.v1.QueryInterchainAccountRequest) returns (.ibc.applications.interchain_accounts.controller.v1.QueryInterchainAccountResponse);
+  rpc Params (.ibc.applications.interchain_accounts.controller.v1.QueryParamsRequest) returns (.ibc.applications.interchain_accounts.controller.v1.QueryParamsResponse);
+}

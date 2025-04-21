@@ -1,0 +1,12 @@
+service Query {
+  rpc Accounts (.cosmos.auth.v1beta1.QueryAccountsRequest) returns (.cosmos.auth.v1beta1.QueryAccountsResponse);
+  rpc Account (.cosmos.auth.v1beta1.QueryAccountRequest) returns (.cosmos.auth.v1beta1.QueryAccountResponse);
+  rpc AccountAddressByID (.cosmos.auth.v1beta1.QueryAccountAddressByIDRequest) returns (.cosmos.auth.v1beta1.QueryAccountAddressByIDResponse);
+  rpc Params (.cosmos.auth.v1beta1.QueryParamsRequest) returns (.cosmos.auth.v1beta1.QueryParamsResponse);
+  rpc ModuleAccounts (.cosmos.auth.v1beta1.QueryModuleAccountsRequest) returns (.cosmos.auth.v1beta1.QueryModuleAccountsResponse);
+  rpc ModuleAccountByName (.cosmos.auth.v1beta1.QueryModuleAccountByNameRequest) returns (.cosmos.auth.v1beta1.QueryModuleAccountByNameResponse);
+  rpc Bech32Prefix (.cosmos.auth.v1beta1.Bech32PrefixRequest) returns (.cosmos.auth.v1beta1.Bech32PrefixResponse);
+  rpc AddressBytesToString (.cosmos.auth.v1beta1.AddressBytesToStringRequest) returns (.cosmos.auth.v1beta1.AddressBytesToStringResponse);
+  rpc AddressStringToBytes (.cosmos.auth.v1beta1.AddressStringToBytesRequest) returns (.cosmos.auth.v1beta1.AddressStringToBytesResponse);
+  rpc AccountInfo (.cosmos.auth.v1beta1.QueryAccountInfoRequest) returns (.cosmos.auth.v1beta1.QueryAccountInfoResponse);
+}

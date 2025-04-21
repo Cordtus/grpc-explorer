@@ -1,0 +1,4 @@
+service ReflectionService {
+  rpc ListAllInterfaces (.cosmos.base.reflection.v1beta1.ListAllInterfacesRequest) returns (.cosmos.base.reflection.v1beta1.ListAllInterfacesResponse);
+  rpc ListImplementations (.cosmos.base.reflection.v1beta1.ListImplementationsRequest) returns (.cosmos.base.reflection.v1beta1.ListImplementationsResponse);
+}

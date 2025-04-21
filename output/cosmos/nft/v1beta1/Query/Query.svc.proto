@@ -1,0 +1,9 @@
+service Query {
+  rpc Balance (.cosmos.nft.v1beta1.QueryBalanceRequest) returns (.cosmos.nft.v1beta1.QueryBalanceResponse);
+  rpc Owner (.cosmos.nft.v1beta1.QueryOwnerRequest) returns (.cosmos.nft.v1beta1.QueryOwnerResponse);
+  rpc Supply (.cosmos.nft.v1beta1.QuerySupplyRequest) returns (.cosmos.nft.v1beta1.QuerySupplyResponse);
+  rpc NFTs (.cosmos.nft.v1beta1.QueryNFTsRequest) returns (.cosmos.nft.v1beta1.QueryNFTsResponse);
+  rpc NFT (.cosmos.nft.v1beta1.QueryNFTRequest) returns (.cosmos.nft.v1beta1.QueryNFTResponse);
+  rpc Class (.cosmos.nft.v1beta1.QueryClassRequest) returns (.cosmos.nft.v1beta1.QueryClassResponse);
+  rpc Classes (.cosmos.nft.v1beta1.QueryClassesRequest) returns (.cosmos.nft.v1beta1.QueryClassesResponse);
+}

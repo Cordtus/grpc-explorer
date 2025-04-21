@@ -1,0 +1,7 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .juno.drip.v1.Params params = 1;
+}
+

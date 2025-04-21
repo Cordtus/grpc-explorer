@@ -1,0 +1,11 @@
+service Service {
+  rpc Simulate (.cosmos.tx.v1beta1.SimulateRequest) returns (.cosmos.tx.v1beta1.SimulateResponse);
+  rpc GetTx (.cosmos.tx.v1beta1.GetTxRequest) returns (.cosmos.tx.v1beta1.GetTxResponse);
+  rpc BroadcastTx (.cosmos.tx.v1beta1.BroadcastTxRequest) returns (.cosmos.tx.v1beta1.BroadcastTxResponse);
+  rpc GetTxsEvent (.cosmos.tx.v1beta1.GetTxsEventRequest) returns (.cosmos.tx.v1beta1.GetTxsEventResponse);
+  rpc GetBlockWithTxs (.cosmos.tx.v1beta1.GetBlockWithTxsRequest) returns (.cosmos.tx.v1beta1.GetBlockWithTxsResponse);
+  rpc TxDecode (.cosmos.tx.v1beta1.TxDecodeRequest) returns (.cosmos.tx.v1beta1.TxDecodeResponse);
+  rpc TxEncode (.cosmos.tx.v1beta1.TxEncodeRequest) returns (.cosmos.tx.v1beta1.TxEncodeResponse);
+  rpc TxEncodeAmino (.cosmos.tx.v1beta1.TxEncodeAminoRequest) returns (.cosmos.tx.v1beta1.TxEncodeAminoResponse);
+  rpc TxDecodeAmino (.cosmos.tx.v1beta1.TxDecodeAminoRequest) returns (.cosmos.tx.v1beta1.TxDecodeAminoResponse);
+}

@@ -1,0 +1,3 @@
+service Query {
+  rpc MinimumGasPrices (.gaia.globalfee.v1beta1.QueryMinimumGasPricesRequest) returns (.gaia.globalfee.v1beta1.QueryMinimumGasPricesResponse);
+}

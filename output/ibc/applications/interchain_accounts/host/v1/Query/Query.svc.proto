@@ -1,0 +1,3 @@
+service Query {
+  rpc Params (.ibc.applications.interchain_accounts.host.v1.QueryParamsRequest) returns (.ibc.applications.interchain_accounts.host.v1.QueryParamsResponse);
+}

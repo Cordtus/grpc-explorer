@@ -1,0 +1,7 @@
+message QueryMinimumGasPricesRequest {
+}
+
+message QueryMinimumGasPricesResponse {
+  repeated .cosmos.base.v1beta1.DecCoin minimum_gas_prices = 1;
+}
+

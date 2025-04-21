@@ -1,0 +1,7 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .icq.v1.Params params = 1;
+}
+

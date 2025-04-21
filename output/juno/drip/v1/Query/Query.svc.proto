@@ -1,0 +1,3 @@
+service Query {
+  rpc Params (.juno.drip.v1.QueryParamsRequest) returns (.juno.drip.v1.QueryParamsResponse);
+}

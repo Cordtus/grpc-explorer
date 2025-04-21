@@ -1,0 +1,14 @@
+{
+  "name": "grpcExplorer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "node script.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.4",
+    "dotenv": "^16.5.0",
+    "grpc-reflection-js": "^0.3.0",
+    "protobufjs": "^7.2.0"
+  }
+}

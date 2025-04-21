@@ -1,0 +1,12 @@
+service Query {
+  rpc IncentivizedPackets (.ibc.applications.fee.v1.QueryIncentivizedPacketsRequest) returns (.ibc.applications.fee.v1.QueryIncentivizedPacketsResponse);
+  rpc IncentivizedPacket (.ibc.applications.fee.v1.QueryIncentivizedPacketRequest) returns (.ibc.applications.fee.v1.QueryIncentivizedPacketResponse);
+  rpc IncentivizedPacketsForChannel (.ibc.applications.fee.v1.QueryIncentivizedPacketsForChannelRequest) returns (.ibc.applications.fee.v1.QueryIncentivizedPacketsForChannelResponse);
+  rpc TotalRecvFees (.ibc.applications.fee.v1.QueryTotalRecvFeesRequest) returns (.ibc.applications.fee.v1.QueryTotalRecvFeesResponse);
+  rpc TotalAckFees (.ibc.applications.fee.v1.QueryTotalAckFeesRequest) returns (.ibc.applications.fee.v1.QueryTotalAckFeesResponse);
+  rpc TotalTimeoutFees (.ibc.applications.fee.v1.QueryTotalTimeoutFeesRequest) returns (.ibc.applications.fee.v1.QueryTotalTimeoutFeesResponse);
+  rpc Payee (.ibc.applications.fee.v1.QueryPayeeRequest) returns (.ibc.applications.fee.v1.QueryPayeeResponse);
+  rpc CounterpartyPayee (.ibc.applications.fee.v1.QueryCounterpartyPayeeRequest) returns (.ibc.applications.fee.v1.QueryCounterpartyPayeeResponse);
+  rpc FeeEnabledChannels (.ibc.applications.fee.v1.QueryFeeEnabledChannelsRequest) returns (.ibc.applications.fee.v1.QueryFeeEnabledChannelsResponse);
+  rpc FeeEnabledChannel (.ibc.applications.fee.v1.QueryFeeEnabledChannelRequest) returns (.ibc.applications.fee.v1.QueryFeeEnabledChannelResponse);
+}

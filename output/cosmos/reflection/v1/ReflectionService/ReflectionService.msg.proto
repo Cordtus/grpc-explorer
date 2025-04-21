@@ -1,0 +1,7 @@
+message FileDescriptorsRequest {
+}
+
+message FileDescriptorsResponse {
+  repeated .google.protobuf.FileDescriptorProto files = 1;
+}
+

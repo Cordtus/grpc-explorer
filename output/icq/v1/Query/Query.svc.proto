@@ -1,0 +1,3 @@
+service Query {
+  rpc Params (.icq.v1.QueryParamsRequest) returns (.icq.v1.QueryParamsResponse);
+}

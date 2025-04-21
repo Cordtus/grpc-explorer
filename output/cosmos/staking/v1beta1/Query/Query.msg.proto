@@ -1,0 +1,129 @@
+message QueryValidatorsRequest {
+  string status = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryValidatorsResponse {
+  repeated .cosmos.staking.v1beta1.Validator validators = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryValidatorRequest {
+  string validator_addr = 1;
+}
+
+message QueryValidatorResponse {
+  .cosmos.staking.v1beta1.Validator validator = 1;
+}
+
+message QueryValidatorDelegationsRequest {
+  string validator_addr = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryValidatorDelegationsResponse {
+  repeated .cosmos.staking.v1beta1.DelegationResponse delegation_responses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryValidatorUnbondingDelegationsRequest {
+  string validator_addr = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryValidatorUnbondingDelegationsResponse {
+  repeated .cosmos.staking.v1beta1.UnbondingDelegation unbonding_responses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryDelegationRequest {
+  string delegator_addr = 1;
+  string validator_addr = 2;
+}
+
+message QueryDelegationResponse {
+  .cosmos.staking.v1beta1.DelegationResponse delegation_response = 1;
+}
+
+message QueryUnbondingDelegationRequest {
+  string delegator_addr = 1;
+  string validator_addr = 2;
+}
+
+message QueryUnbondingDelegationResponse {
+  .cosmos.staking.v1beta1.UnbondingDelegation unbond = 1;
+}
+
+message QueryDelegatorDelegationsRequest {
+  string delegator_addr = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryDelegatorDelegationsResponse {
+  repeated .cosmos.staking.v1beta1.DelegationResponse delegation_responses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryDelegatorUnbondingDelegationsRequest {
+  string delegator_addr = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryDelegatorUnbondingDelegationsResponse {
+  repeated .cosmos.staking.v1beta1.UnbondingDelegation unbonding_responses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryRedelegationsRequest {
+  string delegator_addr = 1;
+  string src_validator_addr = 2;
+  string dst_validator_addr = 3;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 4;
+}
+
+message QueryRedelegationsResponse {
+  repeated .cosmos.staking.v1beta1.RedelegationResponse redelegation_responses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryDelegatorValidatorsRequest {
+  string delegator_addr = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryDelegatorValidatorsResponse {
+  repeated .cosmos.staking.v1beta1.Validator validators = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryDelegatorValidatorRequest {
+  string delegator_addr = 1;
+  string validator_addr = 2;
+}
+
+message QueryDelegatorValidatorResponse {
+  .cosmos.staking.v1beta1.Validator validator = 1;
+}
+
+message QueryHistoricalInfoRequest {
+  int64 height = 1;
+}
+
+message QueryHistoricalInfoResponse {
+  .cosmos.staking.v1beta1.HistoricalInfo hist = 1;
+}
+
+message QueryPoolRequest {
+}
+
+message QueryPoolResponse {
+  .cosmos.staking.v1beta1.Pool pool = 1;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .cosmos.staking.v1beta1.Params params = 1;
+}
+

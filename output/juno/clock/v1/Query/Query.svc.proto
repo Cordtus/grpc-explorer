@@ -1,0 +1,5 @@
+service Query {
+  rpc ClockContracts (.juno.clock.v1.QueryClockContracts) returns (.juno.clock.v1.QueryClockContractsResponse);
+  rpc ClockContract (.juno.clock.v1.QueryClockContract) returns (.juno.clock.v1.QueryClockContractResponse);
+  rpc Params (.juno.clock.v1.QueryParamsRequest) returns (.juno.clock.v1.QueryParamsResponse);
+}

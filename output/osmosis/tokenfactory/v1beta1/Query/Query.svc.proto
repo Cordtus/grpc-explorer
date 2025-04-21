@@ -1,0 +1,5 @@
+service Query {
+  rpc Params (.osmosis.tokenfactory.v1beta1.QueryParamsRequest) returns (.osmosis.tokenfactory.v1beta1.QueryParamsResponse);
+  rpc DenomAuthorityMetadata (.osmosis.tokenfactory.v1beta1.QueryDenomAuthorityMetadataRequest) returns (.osmosis.tokenfactory.v1beta1.QueryDenomAuthorityMetadataResponse);
+  rpc DenomsFromCreator (.osmosis.tokenfactory.v1beta1.QueryDenomsFromCreatorRequest) returns (.osmosis.tokenfactory.v1beta1.QueryDenomsFromCreatorResponse);
+}

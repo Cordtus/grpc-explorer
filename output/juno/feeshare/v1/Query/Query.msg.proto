@@ -1,0 +1,44 @@
+message QueryFeeSharesRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryFeeSharesResponse {
+  repeated .juno.feeshare.v1.FeeShare feeshare = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryFeeShareRequest {
+  string contract_address = 1;
+}
+
+message QueryFeeShareResponse {
+  .juno.feeshare.v1.FeeShare feeshare = 1;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .juno.feeshare.v1.Params params = 1;
+}
+
+message QueryDeployerFeeSharesRequest {
+  string deployer_address = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryDeployerFeeSharesResponse {
+  repeated string contract_addresses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryWithdrawerFeeSharesRequest {
+  string withdrawer_address = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryWithdrawerFeeSharesResponse {
+  repeated string contract_addresses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+

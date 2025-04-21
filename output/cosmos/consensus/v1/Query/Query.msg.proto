@@ -1,0 +1,7 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .tendermint.types.ConsensusParams params = 1;
+}
+

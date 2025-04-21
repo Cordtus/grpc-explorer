@@ -1,0 +1,7 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .packetforward.v1.Params params = 1;
+}
+

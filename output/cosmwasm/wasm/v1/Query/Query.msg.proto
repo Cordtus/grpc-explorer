@@ -1,0 +1,101 @@
+message QueryContractInfoRequest {
+  string address = 1;
+}
+
+message QueryContractInfoResponse {
+  string address = 1;
+  .cosmwasm.wasm.v1.ContractInfo contract_info = 2;
+}
+
+message QueryContractHistoryRequest {
+  string address = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryContractHistoryResponse {
+  repeated .cosmwasm.wasm.v1.ContractCodeHistoryEntry entries = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryContractsByCodeRequest {
+  uint64 code_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryContractsByCodeResponse {
+  repeated string contracts = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryAllContractStateRequest {
+  string address = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryAllContractStateResponse {
+  repeated .cosmwasm.wasm.v1.Model models = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryRawContractStateRequest {
+  string address = 1;
+  bytes query_data = 2;
+}
+
+message QueryRawContractStateResponse {
+  bytes data = 1;
+}
+
+message QuerySmartContractStateRequest {
+  string address = 1;
+  bytes query_data = 2;
+}
+
+message QuerySmartContractStateResponse {
+  bytes data = 1;
+}
+
+message QueryCodeRequest {
+  uint64 code_id = 1;
+}
+
+message QueryCodeResponse {
+  .cosmwasm.wasm.v1.CodeInfoResponse code_info = 1;
+  bytes data = 2;
+}
+
+message QueryCodesRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryCodesResponse {
+  repeated .cosmwasm.wasm.v1.CodeInfoResponse code_infos = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryPinnedCodesRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryPinnedCodesResponse {
+  repeated uint64 code_ids = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .cosmwasm.wasm.v1.Params params = 1;
+}
+
+message QueryContractsByCreatorRequest {
+  string creator_address = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryContractsByCreatorResponse {
+  repeated string contract_addresses = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+

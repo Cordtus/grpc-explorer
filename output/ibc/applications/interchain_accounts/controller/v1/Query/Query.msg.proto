@@ -1,0 +1,16 @@
+message QueryInterchainAccountRequest {
+  string owner = 1;
+  string connection_id = 2;
+}
+
+message QueryInterchainAccountResponse {
+  string address = 1;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .ibc.applications.interchain_accounts.controller.v1.Params params = 1;
+}
+

@@ -1,0 +1,11 @@
+service Query {
+  rpc ClientState (.ibc.core.client.v1.QueryClientStateRequest) returns (.ibc.core.client.v1.QueryClientStateResponse);
+  rpc ClientStates (.ibc.core.client.v1.QueryClientStatesRequest) returns (.ibc.core.client.v1.QueryClientStatesResponse);
+  rpc ConsensusState (.ibc.core.client.v1.QueryConsensusStateRequest) returns (.ibc.core.client.v1.QueryConsensusStateResponse);
+  rpc ConsensusStates (.ibc.core.client.v1.QueryConsensusStatesRequest) returns (.ibc.core.client.v1.QueryConsensusStatesResponse);
+  rpc ConsensusStateHeights (.ibc.core.client.v1.QueryConsensusStateHeightsRequest) returns (.ibc.core.client.v1.QueryConsensusStateHeightsResponse);
+  rpc ClientStatus (.ibc.core.client.v1.QueryClientStatusRequest) returns (.ibc.core.client.v1.QueryClientStatusResponse);
+  rpc ClientParams (.ibc.core.client.v1.QueryClientParamsRequest) returns (.ibc.core.client.v1.QueryClientParamsResponse);
+  rpc UpgradedClientState (.ibc.core.client.v1.QueryUpgradedClientStateRequest) returns (.ibc.core.client.v1.QueryUpgradedClientStateResponse);
+  rpc UpgradedConsensusState (.ibc.core.client.v1.QueryUpgradedConsensusStateRequest) returns (.ibc.core.client.v1.QueryUpgradedConsensusStateResponse);
+}
