@@ -25,12 +25,12 @@
    ```
 3. Create a `.env` file in the project root (optional):
    ```ini
-   SEIGRPC=your.grpc.host:443
+   GRPC=your.grpc.host:443
    ```
 
 ## Configuration
 
-- You can define the target endpoint in `.env` as `SEIGRPC=host:port`.
+- You can define the target endpoint in `.env` as `GRPC=host:port`.
 - Alternatively, pass the endpoint when running:
   ```bash
   yarn generate <host:port>
