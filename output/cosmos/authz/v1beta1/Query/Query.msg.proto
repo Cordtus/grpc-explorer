@@ -1,0 +1,32 @@
+message QueryGrantsRequest {
+  string granter = 1;
+  string grantee = 2;
+  string msg_type_url = 3;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 4;
+}
+
+message QueryGrantsResponse {
+  repeated .cosmos.authz.v1beta1.Grant grants = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryGranterGrantsRequest {
+  string granter = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryGranterGrantsResponse {
+  repeated .cosmos.authz.v1beta1.GrantAuthorization grants = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryGranteeGrantsRequest {
+  string grantee = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryGranteeGrantsResponse {
+  repeated .cosmos.authz.v1beta1.GrantAuthorization grants = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+

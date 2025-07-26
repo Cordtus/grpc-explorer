@@ -1,0 +1,141 @@
+message PoolsRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message PoolsResponse {
+  repeated .google.protobuf.Any pools = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message ParamsRequest {
+}
+
+message ParamsResponse {
+  .osmosis.concentratedliquidity.Params params = 1;
+}
+
+message UserPositionsRequest {
+  string address = 1;
+  uint64 pool_id = 2;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 3;
+}
+
+message UserPositionsResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.FullPositionBreakdown positions = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message LiquidityPerTickRangeRequest {
+  uint64 pool_id = 1;
+}
+
+message LiquidityPerTickRangeResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.LiquidityDepthWithRange liquidity = 1;
+  int64 bucket_index = 2;
+}
+
+message LiquidityNetInDirectionRequest {
+  uint64 pool_id = 1;
+  string token_in = 2;
+  int64 start_tick = 3;
+  bool use_cur_tick = 4;
+  int64 bound_tick = 5;
+  bool use_no_bound = 6;
+}
+
+message LiquidityNetInDirectionResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.TickLiquidityNet liquidity_depths = 1;
+  int64 current_tick = 2;
+  string current_liquidity = 3;
+  string current_sqrt_price = 4;
+}
+
+message ClaimableSpreadRewardsRequest {
+  uint64 position_id = 1;
+}
+
+message ClaimableSpreadRewardsResponse {
+  repeated .cosmos.base.v1beta1.Coin claimable_spread_rewards = 1;
+}
+
+message ClaimableIncentivesRequest {
+  uint64 position_id = 1;
+}
+
+message ClaimableIncentivesResponse {
+  repeated .cosmos.base.v1beta1.Coin claimable_incentives = 1;
+  repeated .cosmos.base.v1beta1.Coin forfeited_incentives = 2;
+}
+
+message PositionByIdRequest {
+  uint64 position_id = 1;
+}
+
+message PositionByIdResponse {
+  .osmosis.concentratedliquidity.v1beta1.FullPositionBreakdown position = 1;
+}
+
+message PoolAccumulatorRewardsRequest {
+  uint64 pool_id = 1;
+}
+
+message PoolAccumulatorRewardsResponse {
+  repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_global = 1;
+  repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_growth_global = 2;
+}
+
+message IncentiveRecordsRequest {
+  uint64 pool_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message IncentiveRecordsResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.IncentiveRecord incentive_records = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message TickAccumulatorTrackersRequest {
+  uint64 pool_id = 1;
+  int64 tick_index = 2;
+}
+
+message TickAccumulatorTrackersResponse {
+  repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 1;
+  repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 2;
+}
+
+message CFMMPoolIdLinkFromConcentratedPoolIdRequest {
+  uint64 concentrated_pool_id = 1;
+}
+
+message CFMMPoolIdLinkFromConcentratedPoolIdResponse {
+  uint64 cfmm_pool_id = 1;
+}
+
+message UserUnbondingPositionsRequest {
+  string address = 1;
+}
+
+message UserUnbondingPositionsResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.PositionWithPeriodLock positions_with_period_lock = 1;
+}
+
+message GetTotalLiquidityRequest {
+}
+
+message GetTotalLiquidityResponse {
+  repeated .cosmos.base.v1beta1.Coin total_liquidity = 1;
+}
+
+message NumNextInitializedTicksRequest {
+  uint64 pool_id = 1;
+  string token_in_denom = 2;
+  uint64 num_next_initialized_ticks = 3;
+}
+
+message NumNextInitializedTicksResponse {
+  repeated .osmosis.concentratedliquidity.v1beta1.TickLiquidityNet liquidity_depths = 1;
+  int64 current_tick = 2;
+  string current_liquidity = 3;
+}
+

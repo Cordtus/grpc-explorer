@@ -1,0 +1,103 @@
+message QueryClientStateRequest {
+  string client_id = 1;
+}
+
+message QueryClientStateResponse {
+  .google.protobuf.Any client_state = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+}
+
+message QueryClientStatesRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryClientStatesResponse {
+  repeated .ibc.core.client.v1.IdentifiedClientState client_states = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryConsensusStateRequest {
+  string client_id = 1;
+  uint64 revision_number = 2;
+  uint64 revision_height = 3;
+  bool latest_height = 4;
+}
+
+message QueryConsensusStateResponse {
+  .google.protobuf.Any consensus_state = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+}
+
+message QueryConsensusStatesRequest {
+  string client_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryConsensusStatesResponse {
+  repeated .ibc.core.client.v1.ConsensusStateWithHeight consensus_states = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryConsensusStateHeightsRequest {
+  string client_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryConsensusStateHeightsResponse {
+  repeated .ibc.core.client.v1.Height consensus_state_heights = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryClientStatusRequest {
+  string client_id = 1;
+}
+
+message QueryClientStatusResponse {
+  string status = 1;
+}
+
+message QueryClientParamsRequest {
+}
+
+message QueryClientParamsResponse {
+  .ibc.core.client.v1.Params params = 1;
+}
+
+message QueryClientCreatorRequest {
+  string client_id = 1;
+}
+
+message QueryClientCreatorResponse {
+  string creator = 1;
+}
+
+message QueryUpgradedClientStateRequest {
+}
+
+message QueryUpgradedClientStateResponse {
+  .google.protobuf.Any upgraded_client_state = 1;
+}
+
+message QueryUpgradedConsensusStateRequest {
+}
+
+message QueryUpgradedConsensusStateResponse {
+  .google.protobuf.Any upgraded_consensus_state = 1;
+}
+
+message QueryVerifyMembershipRequest {
+  string client_id = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+  bytes value = 5;
+  uint64 time_delay = 6;
+  uint64 block_delay = 7;
+  .ibc.core.commitment.v2.MerklePath merkle_path = 8;
+}
+
+message QueryVerifyMembershipResponse {
+  bool success = 1;
+}
+

@@ -1,0 +1,9 @@
+service Service {
+  rpc GetNodeInfo (.cosmos.base.tendermint.v1beta1.GetNodeInfoRequest) returns (.cosmos.base.tendermint.v1beta1.GetNodeInfoResponse);
+  rpc GetSyncing (.cosmos.base.tendermint.v1beta1.GetSyncingRequest) returns (.cosmos.base.tendermint.v1beta1.GetSyncingResponse);
+  rpc GetLatestBlock (.cosmos.base.tendermint.v1beta1.GetLatestBlockRequest) returns (.cosmos.base.tendermint.v1beta1.GetLatestBlockResponse);
+  rpc GetBlockByHeight (.cosmos.base.tendermint.v1beta1.GetBlockByHeightRequest) returns (.cosmos.base.tendermint.v1beta1.GetBlockByHeightResponse);
+  rpc GetLatestValidatorSet (.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetRequest) returns (.cosmos.base.tendermint.v1beta1.GetLatestValidatorSetResponse);
+  rpc GetValidatorSetByHeight (.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightRequest) returns (.cosmos.base.tendermint.v1beta1.GetValidatorSetByHeightResponse);
+  rpc ABCIQuery (.cosmos.base.tendermint.v1beta1.ABCIQueryRequest) returns (.cosmos.base.tendermint.v1beta1.ABCIQueryResponse);
+}

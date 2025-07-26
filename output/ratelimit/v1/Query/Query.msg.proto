@@ -1,0 +1,46 @@
+message QueryAllRateLimitsRequest {
+}
+
+message QueryAllRateLimitsResponse {
+  repeated .ratelimit.v1.RateLimit rate_limits = 1;
+}
+
+message QueryRateLimitRequest {
+  string denom = 1;
+  string channel_or_client_id = 2;
+}
+
+message QueryRateLimitResponse {
+  .ratelimit.v1.RateLimit rate_limit = 1;
+}
+
+message QueryRateLimitsByChainIdRequest {
+  string chain_id = 1;
+}
+
+message QueryRateLimitsByChainIdResponse {
+  repeated .ratelimit.v1.RateLimit rate_limits = 1;
+}
+
+message QueryRateLimitsByChannelOrClientIdRequest {
+  string channel_or_client_id = 1;
+}
+
+message QueryRateLimitsByChannelOrClientIdResponse {
+  repeated .ratelimit.v1.RateLimit rate_limits = 1;
+}
+
+message QueryAllBlacklistedDenomsRequest {
+}
+
+message QueryAllBlacklistedDenomsResponse {
+  repeated string denoms = 1;
+}
+
+message QueryAllWhitelistedAddressesRequest {
+}
+
+message QueryAllWhitelistedAddressesResponse {
+  repeated .ratelimit.v1.WhitelistedAddressPair address_pairs = 1;
+}
+

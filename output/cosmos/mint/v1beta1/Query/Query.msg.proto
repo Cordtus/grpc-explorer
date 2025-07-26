@@ -1,0 +1,21 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .cosmos.mint.v1beta1.Params params = 1;
+}
+
+message QueryInflationRequest {
+}
+
+message QueryInflationResponse {
+  bytes inflation = 1;
+}
+
+message QueryAnnualProvisionsRequest {
+}
+
+message QueryAnnualProvisionsResponse {
+  bytes annual_provisions = 1;
+}
+

@@ -1,0 +1,4 @@
+service Query {
+  rpc CounterpartyInfo (.ibc.core.client.v2.QueryCounterpartyInfoRequest) returns (.ibc.core.client.v2.QueryCounterpartyInfoResponse);
+  rpc Config (.ibc.core.client.v2.QueryConfigRequest) returns (.ibc.core.client.v2.QueryConfigResponse);
+}

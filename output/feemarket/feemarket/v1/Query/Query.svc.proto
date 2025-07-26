@@ -1,0 +1,6 @@
+service Query {
+  rpc Params (.feemarket.feemarket.v1.ParamsRequest) returns (.feemarket.feemarket.v1.ParamsResponse);
+  rpc State (.feemarket.feemarket.v1.StateRequest) returns (.feemarket.feemarket.v1.StateResponse);
+  rpc GasPrice (.feemarket.feemarket.v1.GasPriceRequest) returns (.feemarket.feemarket.v1.GasPriceResponse);
+  rpc GasPrices (.feemarket.feemarket.v1.GasPricesRequest) returns (.feemarket.feemarket.v1.GasPricesResponse);
+}

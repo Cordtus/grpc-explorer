@@ -1,0 +1,84 @@
+message QueryConstitutionRequest {
+}
+
+message QueryConstitutionResponse {
+  string constitution = 1;
+}
+
+message QueryProposalRequest {
+  uint64 proposal_id = 1;
+}
+
+message QueryProposalResponse {
+  .cosmos.gov.v1.Proposal proposal = 1;
+}
+
+message QueryProposalsRequest {
+  .cosmos.gov.v1.ProposalStatus proposal_status = 1;
+  string voter = 2;
+  string depositor = 3;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 4;
+}
+
+message QueryProposalsResponse {
+  repeated .cosmos.gov.v1.Proposal proposals = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryVoteRequest {
+  uint64 proposal_id = 1;
+  string voter = 2;
+}
+
+message QueryVoteResponse {
+  .cosmos.gov.v1.Vote vote = 1;
+}
+
+message QueryVotesRequest {
+  uint64 proposal_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryVotesResponse {
+  repeated .cosmos.gov.v1.Vote votes = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryParamsRequest {
+  string params_type = 1;
+}
+
+message QueryParamsResponse {
+  .cosmos.gov.v1.VotingParams voting_params = 1;
+  .cosmos.gov.v1.DepositParams deposit_params = 2;
+  .cosmos.gov.v1.TallyParams tally_params = 3;
+  .cosmos.gov.v1.Params params = 4;
+}
+
+message QueryDepositRequest {
+  uint64 proposal_id = 1;
+  string depositor = 2;
+}
+
+message QueryDepositResponse {
+  .cosmos.gov.v1.Deposit deposit = 1;
+}
+
+message QueryDepositsRequest {
+  uint64 proposal_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryDepositsResponse {
+  repeated .cosmos.gov.v1.Deposit deposits = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryTallyResultRequest {
+  uint64 proposal_id = 1;
+}
+
+message QueryTallyResultResponse {
+  .cosmos.gov.v1.TallyResult tally = 1;
+}
+

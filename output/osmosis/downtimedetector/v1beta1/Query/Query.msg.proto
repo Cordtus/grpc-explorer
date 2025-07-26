@@ -1,0 +1,9 @@
+message RecoveredSinceDowntimeOfLengthRequest {
+  .osmosis.downtimedetector.v1beta1.Downtime downtime = 1;
+  .google.protobuf.Duration recovery = 2;
+}
+
+message RecoveredSinceDowntimeOfLengthResponse {
+  bool succesfully_recovered = 1;
+}
+

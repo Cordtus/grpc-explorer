@@ -1,0 +1,4 @@
+service Query {
+  rpc Evidence (.cosmos.evidence.v1beta1.QueryEvidenceRequest) returns (.cosmos.evidence.v1beta1.QueryEvidenceResponse);
+  rpc AllEvidence (.cosmos.evidence.v1beta1.QueryAllEvidenceRequest) returns (.cosmos.evidence.v1beta1.QueryAllEvidenceResponse);
+}

@@ -1,0 +1,8 @@
+service Query {
+  rpc AllRateLimits (.ratelimit.v1.QueryAllRateLimitsRequest) returns (.ratelimit.v1.QueryAllRateLimitsResponse);
+  rpc RateLimit (.ratelimit.v1.QueryRateLimitRequest) returns (.ratelimit.v1.QueryRateLimitResponse);
+  rpc RateLimitsByChainId (.ratelimit.v1.QueryRateLimitsByChainIdRequest) returns (.ratelimit.v1.QueryRateLimitsByChainIdResponse);
+  rpc RateLimitsByChannelOrClientId (.ratelimit.v1.QueryRateLimitsByChannelOrClientIdRequest) returns (.ratelimit.v1.QueryRateLimitsByChannelOrClientIdResponse);
+  rpc AllBlacklistedDenoms (.ratelimit.v1.QueryAllBlacklistedDenomsRequest) returns (.ratelimit.v1.QueryAllBlacklistedDenomsResponse);
+  rpc AllWhitelistedAddresses (.ratelimit.v1.QueryAllWhitelistedAddressesRequest) returns (.ratelimit.v1.QueryAllWhitelistedAddressesResponse);
+}

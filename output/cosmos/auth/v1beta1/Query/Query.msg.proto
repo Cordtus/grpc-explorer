@@ -1,0 +1,79 @@
+message QueryAccountsRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryAccountsResponse {
+  repeated .google.protobuf.Any accounts = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryAccountRequest {
+  string address = 1;
+}
+
+message QueryAccountResponse {
+  .google.protobuf.Any account = 1;
+}
+
+message QueryAccountAddressByIDRequest {
+  int64 id = 1;
+  uint64 account_id = 2;
+}
+
+message QueryAccountAddressByIDResponse {
+  string account_address = 1;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .cosmos.auth.v1beta1.Params params = 1;
+}
+
+message QueryModuleAccountsRequest {
+}
+
+message QueryModuleAccountsResponse {
+  repeated .google.protobuf.Any accounts = 1;
+}
+
+message QueryModuleAccountByNameRequest {
+  string name = 1;
+}
+
+message QueryModuleAccountByNameResponse {
+  .google.protobuf.Any account = 1;
+}
+
+message Bech32PrefixRequest {
+}
+
+message Bech32PrefixResponse {
+  string bech32_prefix = 1;
+}
+
+message AddressBytesToStringRequest {
+  bytes address_bytes = 1;
+}
+
+message AddressBytesToStringResponse {
+  string address_string = 1;
+}
+
+message AddressStringToBytesRequest {
+  string address_string = 1;
+}
+
+message AddressStringToBytesResponse {
+  bytes address_bytes = 1;
+}
+
+message QueryAccountInfoRequest {
+  string address = 1;
+}
+
+message QueryAccountInfoResponse {
+  .cosmos.auth.v1beta1.BaseAccount info = 1;
+}
+

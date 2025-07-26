@@ -1,0 +1,16 @@
+message QueryCounterpartyInfoRequest {
+  string client_id = 1;
+}
+
+message QueryCounterpartyInfoResponse {
+  .ibc.core.client.v2.CounterpartyInfo counterparty_info = 1;
+}
+
+message QueryConfigRequest {
+  string client_id = 1;
+}
+
+message QueryConfigResponse {
+  .ibc.core.client.v2.Config config = 1;
+}
+

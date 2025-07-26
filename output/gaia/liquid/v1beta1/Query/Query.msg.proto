@@ -1,0 +1,96 @@
+message QueryLiquidValidatorsRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryLiquidValidatorsResponse {
+  repeated .gaia.liquid.v1beta1.LiquidValidator liquid_validators = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryLiquidValidatorRequest {
+  string validator_addr = 1;
+}
+
+message QueryLiquidValidatorResponse {
+  .gaia.liquid.v1beta1.LiquidValidator liquid_validator = 1;
+}
+
+message QueryTokenizeShareRecordByIdRequest {
+  uint64 id = 1;
+}
+
+message QueryTokenizeShareRecordByIdResponse {
+  .gaia.liquid.v1beta1.TokenizeShareRecord record = 1;
+}
+
+message QueryTokenizeShareRecordByDenomRequest {
+  string denom = 1;
+}
+
+message QueryTokenizeShareRecordByDenomResponse {
+  .gaia.liquid.v1beta1.TokenizeShareRecord record = 1;
+}
+
+message QueryTokenizeShareRecordsOwnedRequest {
+  string owner = 1;
+}
+
+message QueryTokenizeShareRecordsOwnedResponse {
+  repeated .gaia.liquid.v1beta1.TokenizeShareRecord records = 1;
+}
+
+message QueryAllTokenizeShareRecordsRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryAllTokenizeShareRecordsResponse {
+  repeated .gaia.liquid.v1beta1.TokenizeShareRecord records = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryLastTokenizeShareRecordIdRequest {
+}
+
+message QueryLastTokenizeShareRecordIdResponse {
+  uint64 id = 1;
+}
+
+message QueryTotalTokenizeSharedAssetsRequest {
+}
+
+message QueryTotalTokenizeSharedAssetsResponse {
+  .cosmos.base.v1beta1.Coin value = 1;
+}
+
+message QueryTotalLiquidStaked {
+}
+
+message QueryTotalLiquidStakedResponse {
+  string tokens = 1;
+}
+
+message QueryTokenizeShareLockInfo {
+  string address = 1;
+}
+
+message QueryTokenizeShareLockInfoResponse {
+  string status = 1;
+  string expiration_time = 2;
+}
+
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .gaia.liquid.v1beta1.Params params = 1;
+}
+
+message QueryTokenizeShareRecordRewardRequest {
+  string owner_address = 1;
+}
+
+message QueryTokenizeShareRecordRewardResponse {
+  repeated .gaia.liquid.v1beta1.TokenizeShareRecordReward rewards = 1;
+  repeated .cosmos.base.v1beta1.DecCoin total = 2;
+}
+

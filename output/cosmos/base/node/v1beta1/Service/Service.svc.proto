@@ -1,0 +1,4 @@
+service Service {
+  rpc Config (.cosmos.base.node.v1beta1.ConfigRequest) returns (.cosmos.base.node.v1beta1.ConfigResponse);
+  rpc Status (.cosmos.base.node.v1beta1.StatusRequest) returns (.cosmos.base.node.v1beta1.StatusResponse);
+}

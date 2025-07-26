@@ -1,0 +1,3 @@
+service Query {
+  rpc RecoveredSinceDowntimeOfLength (.osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest) returns (.osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse);
+}

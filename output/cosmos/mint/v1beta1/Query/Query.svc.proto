@@ -1,0 +1,5 @@
+service Query {
+  rpc Params (.cosmos.mint.v1beta1.QueryParamsRequest) returns (.cosmos.mint.v1beta1.QueryParamsResponse);
+  rpc Inflation (.cosmos.mint.v1beta1.QueryInflationRequest) returns (.cosmos.mint.v1beta1.QueryInflationResponse);
+  rpc AnnualProvisions (.cosmos.mint.v1beta1.QueryAnnualProvisionsRequest) returns (.cosmos.mint.v1beta1.QueryAnnualProvisionsResponse);
+}

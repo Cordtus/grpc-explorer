@@ -1,0 +1,14 @@
+service Query {
+  rpc LiquidValidators (.gaia.liquid.v1beta1.QueryLiquidValidatorsRequest) returns (.gaia.liquid.v1beta1.QueryLiquidValidatorsResponse);
+  rpc LiquidValidator (.gaia.liquid.v1beta1.QueryLiquidValidatorRequest) returns (.gaia.liquid.v1beta1.QueryLiquidValidatorResponse);
+  rpc TokenizeShareRecordById (.gaia.liquid.v1beta1.QueryTokenizeShareRecordByIdRequest) returns (.gaia.liquid.v1beta1.QueryTokenizeShareRecordByIdResponse);
+  rpc TokenizeShareRecordByDenom (.gaia.liquid.v1beta1.QueryTokenizeShareRecordByDenomRequest) returns (.gaia.liquid.v1beta1.QueryTokenizeShareRecordByDenomResponse);
+  rpc TokenizeShareRecordsOwned (.gaia.liquid.v1beta1.QueryTokenizeShareRecordsOwnedRequest) returns (.gaia.liquid.v1beta1.QueryTokenizeShareRecordsOwnedResponse);
+  rpc AllTokenizeShareRecords (.gaia.liquid.v1beta1.QueryAllTokenizeShareRecordsRequest) returns (.gaia.liquid.v1beta1.QueryAllTokenizeShareRecordsResponse);
+  rpc LastTokenizeShareRecordId (.gaia.liquid.v1beta1.QueryLastTokenizeShareRecordIdRequest) returns (.gaia.liquid.v1beta1.QueryLastTokenizeShareRecordIdResponse);
+  rpc TotalTokenizeSharedAssets (.gaia.liquid.v1beta1.QueryTotalTokenizeSharedAssetsRequest) returns (.gaia.liquid.v1beta1.QueryTotalTokenizeSharedAssetsResponse);
+  rpc TotalLiquidStaked (.gaia.liquid.v1beta1.QueryTotalLiquidStaked) returns (.gaia.liquid.v1beta1.QueryTotalLiquidStakedResponse);
+  rpc TokenizeShareLockInfo (.gaia.liquid.v1beta1.QueryTokenizeShareLockInfo) returns (.gaia.liquid.v1beta1.QueryTokenizeShareLockInfoResponse);
+  rpc Params (.gaia.liquid.v1beta1.QueryParamsRequest) returns (.gaia.liquid.v1beta1.QueryParamsResponse);
+  rpc TokenizeShareRecordReward (.gaia.liquid.v1beta1.QueryTokenizeShareRecordRewardRequest) returns (.gaia.liquid.v1beta1.QueryTokenizeShareRecordRewardResponse);
+}

@@ -1,0 +1,20 @@
+service Query {
+  rpc Pools (.osmosis.gamm.v1beta1.QueryPoolsRequest) returns (.osmosis.gamm.v1beta1.QueryPoolsResponse);
+  rpc NumPools (.osmosis.gamm.v1beta1.QueryNumPoolsRequest) returns (.osmosis.gamm.v1beta1.QueryNumPoolsResponse);
+  rpc TotalLiquidity (.osmosis.gamm.v1beta1.QueryTotalLiquidityRequest) returns (.osmosis.gamm.v1beta1.QueryTotalLiquidityResponse);
+  rpc PoolsWithFilter (.osmosis.gamm.v1beta1.QueryPoolsWithFilterRequest) returns (.osmosis.gamm.v1beta1.QueryPoolsWithFilterResponse);
+  rpc Pool (.osmosis.gamm.v1beta1.QueryPoolRequest) returns (.osmosis.gamm.v1beta1.QueryPoolResponse);
+  rpc PoolType (.osmosis.gamm.v1beta1.QueryPoolTypeRequest) returns (.osmosis.gamm.v1beta1.QueryPoolTypeResponse);
+  rpc CalcJoinPoolNoSwapShares (.osmosis.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesRequest) returns (.osmosis.gamm.v1beta1.QueryCalcJoinPoolNoSwapSharesResponse);
+  rpc CalcJoinPoolShares (.osmosis.gamm.v1beta1.QueryCalcJoinPoolSharesRequest) returns (.osmosis.gamm.v1beta1.QueryCalcJoinPoolSharesResponse);
+  rpc CalcExitPoolCoinsFromShares (.osmosis.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesRequest) returns (.osmosis.gamm.v1beta1.QueryCalcExitPoolCoinsFromSharesResponse);
+  rpc PoolParams (.osmosis.gamm.v1beta1.QueryPoolParamsRequest) returns (.osmosis.gamm.v1beta1.QueryPoolParamsResponse);
+  rpc TotalPoolLiquidity (.osmosis.gamm.v1beta1.QueryTotalPoolLiquidityRequest) returns (.osmosis.gamm.v1beta1.QueryTotalPoolLiquidityResponse);
+  rpc TotalShares (.osmosis.gamm.v1beta1.QueryTotalSharesRequest) returns (.osmosis.gamm.v1beta1.QueryTotalSharesResponse);
+  rpc SpotPrice (.osmosis.gamm.v1beta1.QuerySpotPriceRequest) returns (.osmosis.gamm.v1beta1.QuerySpotPriceResponse);
+  rpc EstimateSwapExactAmountIn (.osmosis.gamm.v1beta1.QuerySwapExactAmountInRequest) returns (.osmosis.gamm.v1beta1.QuerySwapExactAmountInResponse);
+  rpc EstimateSwapExactAmountOut (.osmosis.gamm.v1beta1.QuerySwapExactAmountOutRequest) returns (.osmosis.gamm.v1beta1.QuerySwapExactAmountOutResponse);
+  rpc ConcentratedPoolIdLinkFromCFMM (.osmosis.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMRequest) returns (.osmosis.gamm.v1beta1.QueryConcentratedPoolIdLinkFromCFMMResponse);
+  rpc CFMMConcentratedPoolLinks (.osmosis.gamm.v1beta1.QueryCFMMConcentratedPoolLinksRequest) returns (.osmosis.gamm.v1beta1.QueryCFMMConcentratedPoolLinksResponse);
+  rpc Params (.osmosis.gamm.v1beta1.ParamsRequest) returns (.osmosis.gamm.v1beta1.ParamsResponse);
+}

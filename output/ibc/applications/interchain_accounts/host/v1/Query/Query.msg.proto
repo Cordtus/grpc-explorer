@@ -1,0 +1,7 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .ibc.applications.interchain_accounts.host.v1.Params params = 1;
+}
+

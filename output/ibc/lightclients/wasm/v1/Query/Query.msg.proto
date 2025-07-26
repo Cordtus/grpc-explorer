@@ -1,0 +1,17 @@
+message QueryChecksumsRequest {
+  .cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryChecksumsResponse {
+  repeated string checksums = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryCodeRequest {
+  string checksum = 1;
+}
+
+message QueryCodeResponse {
+  bytes data = 1;
+}
+

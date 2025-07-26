@@ -1,0 +1,16 @@
+message QueryParamsRequest {
+  string subspace = 1;
+  string key = 2;
+}
+
+message QueryParamsResponse {
+  .cosmos.params.v1beta1.ParamChange param = 1;
+}
+
+message QuerySubspacesRequest {
+}
+
+message QuerySubspacesResponse {
+  repeated .cosmos.params.v1beta1.Subspace subspaces = 1;
+}
+

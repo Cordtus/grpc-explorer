@@ -1,0 +1,8 @@
+service ReflectionService {
+  rpc GetAuthnDescriptor (.cosmos.base.reflection.v2alpha1.GetAuthnDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetAuthnDescriptorResponse);
+  rpc GetChainDescriptor (.cosmos.base.reflection.v2alpha1.GetChainDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetChainDescriptorResponse);
+  rpc GetCodecDescriptor (.cosmos.base.reflection.v2alpha1.GetCodecDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetCodecDescriptorResponse);
+  rpc GetConfigurationDescriptor (.cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetConfigurationDescriptorResponse);
+  rpc GetQueryServicesDescriptor (.cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetQueryServicesDescriptorResponse);
+  rpc GetTxDescriptor (.cosmos.base.reflection.v2alpha1.GetTxDescriptorRequest) returns (.cosmos.base.reflection.v2alpha1.GetTxDescriptorResponse);
+}

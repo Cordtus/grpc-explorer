@@ -1,0 +1,29 @@
+message ParamsRequest {
+}
+
+message ParamsResponse {
+  .feemarket.feemarket.v1.Params params = 1;
+}
+
+message StateRequest {
+}
+
+message StateResponse {
+  .feemarket.feemarket.v1.State state = 1;
+}
+
+message GasPriceRequest {
+  string denom = 1;
+}
+
+message GasPriceResponse {
+  .cosmos.base.v1beta1.DecCoin price = 1;
+}
+
+message GasPricesRequest {
+}
+
+message GasPricesResponse {
+  repeated .cosmos.base.v1beta1.DecCoin prices = 1;
+}
+

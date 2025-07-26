@@ -1,0 +1,86 @@
+message QueryParamsRequest {
+}
+
+message QueryParamsResponse {
+  .cosmos.distribution.v1beta1.Params params = 1;
+}
+
+message QueryValidatorDistributionInfoRequest {
+  string validator_address = 1;
+}
+
+message QueryValidatorDistributionInfoResponse {
+  string operator_address = 1;
+  repeated .cosmos.base.v1beta1.DecCoin self_bond_rewards = 2;
+  repeated .cosmos.base.v1beta1.DecCoin commission = 3;
+}
+
+message QueryValidatorOutstandingRewardsRequest {
+  string validator_address = 1;
+}
+
+message QueryValidatorOutstandingRewardsResponse {
+  .cosmos.distribution.v1beta1.ValidatorOutstandingRewards rewards = 1;
+}
+
+message QueryValidatorCommissionRequest {
+  string validator_address = 1;
+}
+
+message QueryValidatorCommissionResponse {
+  .cosmos.distribution.v1beta1.ValidatorAccumulatedCommission commission = 1;
+}
+
+message QueryValidatorSlashesRequest {
+  string validator_address = 1;
+  uint64 starting_height = 2;
+  uint64 ending_height = 3;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 4;
+}
+
+message QueryValidatorSlashesResponse {
+  repeated .cosmos.distribution.v1beta1.ValidatorSlashEvent slashes = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryDelegationRewardsRequest {
+  string delegator_address = 1;
+  string validator_address = 2;
+}
+
+message QueryDelegationRewardsResponse {
+  repeated .cosmos.base.v1beta1.DecCoin rewards = 1;
+}
+
+message QueryDelegationTotalRewardsRequest {
+  string delegator_address = 1;
+}
+
+message QueryDelegationTotalRewardsResponse {
+  repeated .cosmos.distribution.v1beta1.DelegationDelegatorReward rewards = 1;
+  repeated .cosmos.base.v1beta1.DecCoin total = 2;
+}
+
+message QueryDelegatorValidatorsRequest {
+  string delegator_address = 1;
+}
+
+message QueryDelegatorValidatorsResponse {
+  repeated string validators = 1;
+}
+
+message QueryDelegatorWithdrawAddressRequest {
+  string delegator_address = 1;
+}
+
+message QueryDelegatorWithdrawAddressResponse {
+  string withdraw_address = 1;
+}
+
+message QueryCommunityPoolRequest {
+}
+
+message QueryCommunityPoolResponse {
+  repeated .cosmos.base.v1beta1.DecCoin pool = 1;
+}
+

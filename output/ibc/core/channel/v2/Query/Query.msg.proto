@@ -1,0 +1,86 @@
+message QueryNextSequenceSendRequest {
+  string client_id = 1;
+}
+
+message QueryNextSequenceSendResponse {
+  uint64 next_sequence_send = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+}
+
+message QueryPacketCommitmentRequest {
+  string client_id = 1;
+  uint64 sequence = 2;
+}
+
+message QueryPacketCommitmentResponse {
+  bytes commitment = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+}
+
+message QueryPacketCommitmentsRequest {
+  string client_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+message QueryPacketCommitmentsResponse {
+  repeated .ibc.core.channel.v2.PacketState commitments = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+  .ibc.core.client.v1.Height height = 3;
+}
+
+message QueryPacketAcknowledgementRequest {
+  string client_id = 1;
+  uint64 sequence = 2;
+}
+
+message QueryPacketAcknowledgementResponse {
+  bytes acknowledgement = 1;
+  bytes proof = 2;
+  .ibc.core.client.v1.Height proof_height = 3;
+}
+
+message QueryPacketAcknowledgementsRequest {
+  string client_id = 1;
+  .cosmos.base.query.v1beta1.PageRequest pagination = 2;
+  repeated uint64 packet_commitment_sequences = 3;
+}
+
+message QueryPacketAcknowledgementsResponse {
+  repeated .ibc.core.channel.v2.PacketState acknowledgements = 1;
+  .cosmos.base.query.v1beta1.PageResponse pagination = 2;
+  .ibc.core.client.v1.Height height = 3;
+}
+
+message QueryPacketReceiptRequest {
+  string client_id = 1;
+  uint64 sequence = 2;
+}
+
+message QueryPacketReceiptResponse {
+  bool received = 2;
+  bytes proof = 3;
+  .ibc.core.client.v1.Height proof_height = 4;
+}
+
+message QueryUnreceivedPacketsRequest {
+  string client_id = 1;
+  repeated uint64 sequences = 2;
+}
+
+message QueryUnreceivedPacketsResponse {
+  repeated uint64 sequences = 1;
+  .ibc.core.client.v1.Height height = 2;
+}
+
+message QueryUnreceivedAcksRequest {
+  string client_id = 1;
+  repeated uint64 packet_ack_sequences = 2;
+}
+
+message QueryUnreceivedAcksResponse {
+  repeated uint64 sequences = 1;
+  .ibc.core.client.v1.Height height = 2;
+}
+
