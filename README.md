@@ -2,9 +2,10 @@
 
 ## Overview
 
-`grpcExplorer` is a CLI tool that connects to gRPC servers with reflection enabled, discovers available services and RPC methods, and generates human-readable `.proto` snippets organized by blockchain network. The tool supports multi-network parallel processing with automatic endpoint failover.
+`grpcExplorer` is a simple script that connects to Cosmos SDK gRPC servers, uses the reflection service to scrape all available query and service methods, and generates human-readable `.proto` snippets in `./output`, organized by network.
+It supports multi-network parallel processing with automatic endpoint failover.
 
-**Note**: These are not full representations or replacements for the full proto files but they can serve a similar purpose for simplified applications.
+**Note**: These are not complete replacements for the full proto files but they can serve a similar purpose for simplified applications.
 
 ## Features
 
@@ -20,36 +21,14 @@
 
 - Node.js v14 or later
 - Yarn or npm
-- A gRPC endpoint with reflection enabled
-
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone <repo-url> grpcExplorer
-   cd grpcExplorer
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   yarn install
-   # or
-   npm install
-   ```
-
-3. Create a `.env` file in the project root (optional):
-
-   ```ini
-   GRPC=your.grpc.host:443
-   ```
+- A gRPC endpoint
+- [`grpcurl`](https://github.com/fullstorydev/grpcurl)
 
 ## Configuration
 
-The tool supports two configuration modes:
+There are two supported configuration modes:
 
-### Single Network (Legacy)
+### Single Network
 
 Define a single network with multiple failover endpoints:
 
@@ -63,9 +42,9 @@ Process multiple networks in parallel by defining them separately:
 
 ```ini
 # Each GRPC_* variable defines a separate network
-GRPC_NEUTRON=grpc.neutron.basementnodes.ca:443
-GRPC_JUNO=grpc.juno.basementnodes.ca:443
-GRPC_OSMOSIS=grpc.osmosis.example.com:443,backup.osmosis.example.com:443
+GRPC_CHAIN1=grpc.chain1.basementnodes.ca:443
+GRPC_CHAIN2=grpc.chain2.basementnodes.ca:443
+GRPC_CHAIN3=grpc.chain3.example.com:443,backup.chain3.example.com:443
 ```
 
 ## Usage
@@ -77,7 +56,7 @@ Generate proto definitions from configured endpoints:
 yarn generate
 
 # Override with direct endpoint (single network mode)
-yarn generate grpc.myhost.com:443
+yarn generate grpc.mychain.com:443
 ```
 
 The direct endpoint parameter overrides any `.env` configuration and runs in single-network mode.
