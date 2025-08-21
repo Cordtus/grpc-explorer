@@ -1,8 +1,0 @@
-service Query {
-  rpc Params (.ibc.applications.transfer.v1.QueryParamsRequest) returns (.ibc.applications.transfer.v1.QueryParamsResponse);
-  rpc Denoms (.ibc.applications.transfer.v1.QueryDenomsRequest) returns (.ibc.applications.transfer.v1.QueryDenomsResponse);
-  rpc Denom (.ibc.applications.transfer.v1.QueryDenomRequest) returns (.ibc.applications.transfer.v1.QueryDenomResponse);
-  rpc DenomHash (.ibc.applications.transfer.v1.QueryDenomHashRequest) returns (.ibc.applications.transfer.v1.QueryDenomHashResponse);
-  rpc EscrowAddress (.ibc.applications.transfer.v1.QueryEscrowAddressRequest) returns (.ibc.applications.transfer.v1.QueryEscrowAddressResponse);
-  rpc TotalEscrowForDenom (.ibc.applications.transfer.v1.QueryTotalEscrowForDenomRequest) returns (.ibc.applications.transfer.v1.QueryTotalEscrowForDenomResponse);
-}

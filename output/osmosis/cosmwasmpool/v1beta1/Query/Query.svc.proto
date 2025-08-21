@@ -1,6 +1,0 @@
-service Query {
-  rpc Pools (.osmosis.cosmwasmpool.v1beta1.PoolsRequest) returns (.osmosis.cosmwasmpool.v1beta1.PoolsResponse);
-  rpc Params (.osmosis.cosmwasmpool.v1beta1.ParamsRequest) returns (.osmosis.cosmwasmpool.v1beta1.ParamsResponse);
-  rpc ContractInfoByPoolId (.osmosis.cosmwasmpool.v1beta1.ContractInfoByPoolIdRequest) returns (.osmosis.cosmwasmpool.v1beta1.ContractInfoByPoolIdResponse);
-  rpc PoolRawFilteredState (.osmosis.cosmwasmpool.v1beta1.PoolRawFilteredStateRequest) returns (.osmosis.cosmwasmpool.v1beta1.PoolRawFilteredStateResponse);
-}

@@ -1,5 +1,0 @@
-service Query {
-  rpc Echo (.testpb.EchoRequest) returns (.testpb.EchoResponse);
-  rpc SayHello (.testpb.SayHelloRequest) returns (.testpb.SayHelloResponse);
-  rpc TestAny (.testpb.TestAnyRequest) returns (.testpb.TestAnyResponse);
-}

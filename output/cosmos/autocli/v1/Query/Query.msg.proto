@@ -1,7 +1,0 @@
-message AppOptionsRequest {
-}
-
-message AppOptionsResponse {
-  repeated .cosmos.autocli.v1.AppOptionsResponse.ModuleOptionsEntry module_options = 1;
-}
-

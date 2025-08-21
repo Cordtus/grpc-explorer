@@ -1,4 +1,0 @@
-service Query {
-  rpc EpochInfos (.osmosis.epochs.v1beta1.QueryEpochsInfoRequest) returns (.osmosis.epochs.v1beta1.QueryEpochsInfoResponse);
-  rpc CurrentEpoch (.osmosis.epochs.v1beta1.QueryCurrentEpochRequest) returns (.osmosis.epochs.v1beta1.QueryCurrentEpochResponse);
-}
